@@ -11,7 +11,6 @@ const About = () => {
 
   useEffect(() => {
     const query = '*[_type == "abouts"]';
-
     client.fetch(query).then((data) => {
       setabouts(data);
     });
@@ -34,6 +33,7 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
+            
             <img src={urlFor(about.imgUrl)} alt="img" />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}

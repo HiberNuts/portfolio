@@ -35,6 +35,11 @@
   }
 }
 
+video {
+  height: 300px;
+  width: 300px;
+}
+
 .app__header-info {
   flex: 0.65;
   display: flex;
@@ -126,13 +131,13 @@
 
   div:nth-child(2) {
     margin: 1.75rem;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
   }
 
   div:nth-child(3) {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
   }
 
   @media screen and (min-width: 2000px) {
@@ -142,13 +147,13 @@
     }
 
     div:nth-child(3) {
-      width: 170px;
-      height: 170px;
+      width: 200px;
+      height: 200px;
     }
 
     div:nth-child(1) {
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
     }
   }
 
