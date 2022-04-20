@@ -3,9 +3,8 @@ import { motion } from "framer-motion";
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 import "./Header.scss";
-import Designersvg from "../../assets/designer.svg";
-import codingVdeo from "../../assets/happy-hacker.mp4";
-import profile1 from "../../assets/Developper_01__Converted__generated.jpg";
+
+import profile1 from "../../assets/profImg.png";
 
 const scaleVariants = {
   whileInView: {
@@ -50,9 +49,9 @@ const Header = () => (
       {/* <video  loop autoPlay>
         <source  src={codingVdeo} type="video/mp4" />
       </video> */}
-      <video autoPlay="true" src={codingVdeo} />
-      {/* <img src={images.profile} alt="profile_bg" /> */}
-      {/* <img src={profile1} alt="profile_bg" /> */}
+      {/* <video autoPlay="true" src={codingVdeo} /> */}
+      <img src={images.profile} alt="profile_bg" />
+      {/* <img className="profile-img" src={profile1} alt="profile_bg" /> */}
       <motion.img
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: "easeInOut" }}
