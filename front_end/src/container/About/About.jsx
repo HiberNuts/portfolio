@@ -18,6 +18,7 @@ const About = () => {
 
   return (
     <div className="app__about">
+     
       <h2 className="head-text">
         I know that <span> Good Development</span>
         <br />
