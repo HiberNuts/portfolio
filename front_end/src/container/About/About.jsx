@@ -18,7 +18,6 @@ const About = () => {
 
   return (
     <div className="app__about">
-     
       <h2 className="head-text">
         I know that <span> Good Development</span>
         <br />
@@ -34,7 +33,6 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            
             <img src={urlFor(about.imgUrl)} alt="img" />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
@@ -49,9 +47,4 @@ const About = () => {
   );
 };
 
-
-export default AppWrap(
-  MotionWrap(About, 'app__about'),
-  'about',
-  'app__whitebg',
-);
+export default AppWrap(MotionWrap(About, "app__about"), "about", "app__whitebg");
