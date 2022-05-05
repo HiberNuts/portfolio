@@ -36,6 +36,8 @@ const Footer = () => {
       .catch((err) => console.log(err));
   };
 
+  
+
   return (
     <>
       <h2 className="head-text">
