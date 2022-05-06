@@ -36,7 +36,6 @@ const Footer = () => {
       .catch((err) => console.log(err));
   };
 
-  
 
   return (
     <>
