@@ -145,6 +145,17 @@
         height: 30px;
       }
     }
+
+    @media screen and (max-width: 500px){
+      div{
+        width: 40px;
+        height: 40px;
+        svg{
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
   }
 }
 
@@ -177,12 +188,29 @@
 }
 
 @media screen and (max-width: 500px) {
-  .app__navigation,
-  .app__social {
+  .app__navigation {
     display: none;
   }
-
-  .copyright {
-    padding: 2rem;
+  .app__social{
+    position: absolute;
+    display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+margin-top: -125px;
+margin-left: -5px;
+    
+    div{
+      
+      width: 40px;
+      height: 40px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    
   }
+
 }
+
