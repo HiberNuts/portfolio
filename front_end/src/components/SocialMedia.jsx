@@ -15,9 +15,6 @@ const SocialMedia = () => {
           <FaLinkedin />
         </a>
       </div>
-      <div>
-        <BsInstagram />
-      </div>
     </div>
   );
 };

@@ -9,7 +9,6 @@ const AppWrap = (Component, idName, classNames) =>
         <div className="app__wrapper app__flex">
           <Component />
 
-          
         </div>
         <NavigationDots active={idName} />
       </div>

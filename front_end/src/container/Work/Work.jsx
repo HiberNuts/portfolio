@@ -10,15 +10,20 @@ const Work = () => {
   const [animateCard, setanimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setworks] = useState([]);
   const [filterWork, setfilterWork] = useState([]);
+  const [width, setwidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const query = '*[_type == "works"]';
-
     client.fetch(query).then((data) => {
       setworks(data);
       setfilterWork(data);
     });
   }, []);
+
+  function updateSize() {
+    setwidth(window.innerWidth);
+  }
+  window.addEventListener("resize", updateSize);
 
   const handleWorkFilter = (item) => {
     setactiveFilter(item);
@@ -35,8 +40,6 @@ const Work = () => {
     }
   };
 
-
-
   return (
     <div className="app__works">
       <h2 className="head-text">
@@ -44,6 +47,11 @@ const Work = () => {
         <br />
         section
       </h2>
+      {width < 800 ? (
+        <h2 className="p-text">Click on left to view live demo and on right to view source code :)</h2>
+      ) : (
+        <h3></h3>
+      )}
       <div className="app__work-filter">
         {["UI/UX", "Web App", "Mobile App", "React Js", "All"].map((item, index) => (
           <div
@@ -98,9 +106,8 @@ const Work = () => {
               <p className="p-text" style={{ marginTop: 10 }}>
                 {work.description}
               </p>
-              
+
               <div className="app__work-tag app__flex">
-                
                 <p className="p-text">{work.tags[0]}</p>
               </div>
             </div>
